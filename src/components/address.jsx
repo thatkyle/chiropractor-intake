@@ -1,4 +1,5 @@
 import { h, render, Component } from 'preact'
+import Input from './input'
 
 export default class Address extends Component {
   constructor(props) {
