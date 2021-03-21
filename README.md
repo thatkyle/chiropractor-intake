@@ -1,4 +1,4 @@
-# Ecommerce Example Project
+# Chiropractor Intake Form
 
 ## Available Scripts
 
