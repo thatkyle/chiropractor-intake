@@ -16,39 +16,25 @@ export default class Address extends Component {
   render() {
     return (
       <form>
-        <label>
-          Address
-          <br />
-          <input
-            name="address"
-            type="input"
-            value={this.state.address}
-            onChange={this.handleInputChange}
-          />  
-        </label>
-        <br />
-        <label>
-          City
-          <br />
-          <input
-            name="city"
-            type="input"
-            maxLength="1"
-            value={this.state.city}
-            onChange={this.handleInputChange}
-            />
-        </label>
-        <br />
-        <label>
-          State
-          <br />
-          <input
-            name="state"
-            type="input"
-            value={this.state.state}
-            onChange={this.handleInputChange}
-          />
-        </label>
+        <Input
+          labelName='Address'
+          previousData={{ address: this.state.address }}
+          onInputChange={this.handleInputChange}
+          inputName='address'
+        />
+        <Input
+          labelName='City'
+          previousData={{ city: this.state.city }}
+          onInputChange={this.handleInputChange}
+          inputName='city'
+          inputAttributes={{ maxLength: '1' }}
+        />
+        <Input
+          labelName='State'
+          previousData={{ state: this.state.state }}
+          onInputChange={this.handleInputChange}
+          inputName='state'
+        />
       </form>
     );
   }

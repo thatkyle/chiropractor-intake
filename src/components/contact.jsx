@@ -16,38 +16,24 @@ export default class Contact extends Component {
   render() {
     return (
       <form>
-        <label>
-          Home Phone
-          <br />
-          <input
-            name="home_phone"
-            type="input"
-            value={this.state.homePhone}
-            onChange={this.handleInputChange}
-          />
-        </label>
-        <br />
-        <label>
-          Cell Phone
-          <br />
-          <input
-            name="cell_phone"
-            type="input"
-            value={this.state.cellPhone}
-            onChange={this.handleInputChange}
-          />
-        </label>
-        <br />
-        <label>
-          Email Address
-          <br />
-          <input
-            name="email"
-            type="input"
-            value={this.state.email}
-            onChange={this.handleInputChange}
-          />
-        </label>
+        <Input
+          labelName='Cell Phone'
+          previousData={{ cellPhone: this.state.cellPhone }}
+          onInputChange={this.handleInputChange}
+          inputName='cellPhone'
+        />
+        <Input
+          labelName='Home Phone'
+          previousData={{ homePhone: this.state.homePhone }}
+          onInputChange={this.handleInputChange}
+          inputName='homePhone'
+        />
+        <Input
+          labelName='Email Address'
+          previousData={{ emailAddress: this.state.emailAddress }}
+          onInputChange={this.handleInputChange}
+          inputName='emailAddress'
+        />
       </form>
     );
   }

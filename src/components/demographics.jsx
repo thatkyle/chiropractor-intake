@@ -16,49 +16,30 @@ export default class Demographics extends Component {
   render() {
     return (
       <form>
-        <label>
-          Sex
-          <br />
-          <input
-            name="gender"
-            type="input"
-            value={this.state.gender}
-            onChange={this.handleInputChange}
-          />
-        </label>
-        <br />
-        <label>
-          Age
-          <br />
-          <input
-            name="age"
-            type="input"
-            value={this.state.age}
-            onChange={this.handleInputChange}
-          />
-        </label>
-        <br />
-        <label>
-          Birthday
-          <br />
-          <input
-            name="dob"
-            type="input"
-            value={this.state.dob}
-            onChange={this.handleInputChange}
-          />
-        </label>
-        <br />
-        <label>
-          Marital Status
-          <br />
-          <input
-            name="marital_status"
-            type="input"
-            value={this.state.maritalStatus}
-            onChange={this.handleInputChange}
-          />
-        </label>
+        <Input
+          labelName='Sex'
+          previousData={{ gender: this.state.gender }}
+          onInputChange={this.handleInputChange}
+          inputName='gender'
+        />
+        <Input
+          labelName='Age'
+          previousData={{ age: this.state.age }}
+          onInputChange={this.handleInputChange}
+          inputName='age'
+        />
+        <Input
+          labelName='Birthday'
+          previousData={{ dob: this.state.dob }}
+          onInputChange={this.handleInputChange}
+          inputName='dob'
+        />
+        <Input
+          labelName='Marital Status'
+          previousData={{ maritalStatus: this.state.maritalStatus }}
+          onInputChange={this.handleInputChange}
+          inputName='maritalStatus'
+        />
       </form>
     );
   }

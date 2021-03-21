@@ -7,7 +7,7 @@ export default new Map([
   ['name', Name],
   ['address', Address],
   ['contact', Contact],
-  ['demographics',],
+  ['demographics', Demographics],
   ['employer',],
   ['spouse',],
   ['emergency',],
