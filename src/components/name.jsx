@@ -1,4 +1,5 @@
 import { h, render, Component } from 'preact'
+import Input from './input'
 
 export default class Name extends Component {
   constructor(props) {
@@ -7,48 +8,32 @@ export default class Name extends Component {
     this.handleInputChange = this.handleInputChange.bind(this)
   }
 
-  handleInputChange = (event) => {
-    this.setState({
-      [event.target.name]: event.target.value
-    }, () => this.props.onFormChange(this.state))
+  handleInputChange = (data) => {
+    this.setState(data, () => this.props.onFormChange(this.state))
   }
 
   render() {
     return (
       <form>
-        <label>
-          First Name
-          <br />
-          <input
-            name="firstName"
-            type="input"
-            value={this.state.firstName}
-            onChange={this.handleInputChange} 
-          />
-        </label>
-        <br />
-        <label>
-          Middle Initial
-          <br />
-          <input
-            name="middleInitial"
-            type="input"
-            maxLength="1"
-            value={this.state.middleInitial}
-            onChange={this.handleInputChange} 
-            />
-        </label>
-        <br />
-        <label>
-          Last Name
-          <br />
-          <input
-            name="lastName"
-            type="input"
-            value={this.state.lastName}
-            onChange={this.handleInputChange}
-          />
-        </label>
+        <Input
+          labelName='First Name'
+          previousData={{ firstName: this.state.firstName }}
+          onInputChange={this.handleInputChange}
+          inputName='firstName'
+        />
+        <Input
+          labelName='Middle Initial'
+          previousData={{ middleInitial: this.state.middleInitial }}
+          onInputChange={this.handleInputChange}
+          inputName='middleInitial'
+          inputAttributes={{ maxLength: '1' }}
+        />
+        <Input
+          labelName='Last Name'
+          previousData={{ lastName: this.state.lastName }}
+          onInputChange={this.handleInputChange}
+          inputName='lastName'
+        />
       </form>
     );
   }

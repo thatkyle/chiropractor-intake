@@ -19,10 +19,11 @@ export default class Input extends Component {
         {this.props.labelName}
         <br />
         <input
-          name={this.props.inputName}
           type="input"
-          value={this.state.firstName}
-          onChange={this.handleChange} 
+          name={this.props.inputName}
+          value={this.state[this.props.inputName]}
+          onChange={this.handleChange}
+          {...this.props.inputAttributes}
         />
         <br />
       </label>

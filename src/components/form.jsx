@@ -1,6 +1,6 @@
 import { h, render, Component } from 'preact'
 import { connect } from 'react-redux'
-import { components } from './form-stages'
+import formStages from './form-stages'
 import { saveForm, nextFormStage, previousFormStage }  from '../store/actions'
 
 const mapStateToProps = (state) => state
@@ -10,7 +10,7 @@ const mapStateToProps = (state) => state
 class Form extends Component {
   constructor(props) {
     super(props);
-    this.formStages = components
+    this.formStages = formStages
     this.updateForm = this.updateForm.bind(this)
   }
 
@@ -28,7 +28,7 @@ class Form extends Component {
   }
 
   render() {
-    const FormStage = this.formStages[this.props.forms.formStage]
+    const FormStage = this.formStages.get(this.props.forms.formStage)
     return (
       <div>
         <FormStage
