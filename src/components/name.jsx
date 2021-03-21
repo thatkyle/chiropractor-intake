@@ -8,7 +8,7 @@ export default class Name extends Component {
     this.handleInputChange = this.handleInputChange.bind(this)
   }
 
-  handleInputChange = (data) => {
+  handleInputChange(data) {
     this.setState(data, () => this.props.onFormChange(this.state))
   }
 

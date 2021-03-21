@@ -8,10 +8,8 @@ export default class Demographics extends Component {
     this.handleInputChange = this.handleInputChange.bind(this)
   }
 
-  handleInputChange = (event) => {
-    this.setState({
-      [event.target.name]: event.target.value
-    }, () => this.props.onFormChange(this.state))
+  handleInputChange(data) {
+    this.setState(data, () => this.props.onFormChange(this.state))
   }
 
   render() {
