@@ -1,0 +1,3 @@
+export const SAVE_FORM = 'SAVE_FORM'
+export const NEXT_FORM_STAGE = 'NEXT_FORM_STAGE'
+export const PREVIOUS_FORM_STAGE = 'PREVIOUS_FORM_STAGE'

@@ -1,0 +1,26 @@
+{
+  "scripts": {
+    "dev": "snowpack dev",
+    "deploy:local": "snowpack build && start http://localhost:5000 && npx serve build"
+  },
+  "devDependencies": {
+    "@prefresh/snowpack": "^3.1.0",
+    "@snowpack/plugin-webpack": "^2.3.0",
+    "redux-devtools-extension": "^2.13.9",
+    "snowpack": "^3.0.1"
+  },
+  "dependencies": {
+    "preact": "^10.5.12",
+    "preact-render-to-string": "^5.1.12",
+    "preact-router": "^3.2.1",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
+  },
+  "name": "chiropractor-intake",
+  "description": "## Available Scripts",
+  "version": "1.0.0",
+  "main": "snowpack.config.js",
+  "author": "",
+  "license": "ISC"
+}
