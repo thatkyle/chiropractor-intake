@@ -1,7 +1,7 @@
 import { h, render, Component } from 'preact'
 import { connect } from 'react-redux'
 import formStages from './form-stages'
-import { saveForm, nextFormStage, previousFormStage }  from '../store/actions'
+import { saveForm, nextFormStage, previousFormStage }  from 'store/actions'
 
 const mapStateToProps = (state) => state
 

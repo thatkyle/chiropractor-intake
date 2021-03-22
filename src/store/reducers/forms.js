@@ -1,5 +1,5 @@
-import { SAVE_FORM, NEXT_FORM_STAGE, PREVIOUS_FORM_STAGE } from '../action-types'
-import formStages from '../../components/form-stages'
+import { SAVE_FORM, NEXT_FORM_STAGE, PREVIOUS_FORM_STAGE } from 'store/action-types'
+import formStages from 'components/form-stages'
 
 const formStagesOrder = [...formStages.keys()]
 
