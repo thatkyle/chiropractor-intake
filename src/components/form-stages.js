@@ -2,18 +2,24 @@ import Name from './name'
 import Address from './address'
 import Contact from './contact'
 import Demographics from './demographics'
+import Occupation from './occupation'
+import Spouse from './spouse'
+import EmergencyContact from './emergency-contact'
+import Referral from './referral'
+import Complaint from './complaint'
+import Symptoms from './symptoms'
 
 export default new Map([
   ['name', Name],
   ['address', Address],
   ['contact', Contact],
   ['demographics', Demographics],
-  ['employer',],
-  ['spouse',],
-  ['emergency',],
-  ['referral',],
-  ['complaint',],
-  ['symptoms',],
+  ['occupation', Occupation],
+  ['spouse', Spouse],
+  ['emergency-contact', EmergencyContact],
+  ['referral', Referral],
+  ['complaint', Complaint],
+  ['symptoms', Symptoms],
   ['symptoms_chart',],
   ['symptoms_impact',],
   ['wellness_assessment',],
