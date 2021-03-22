@@ -12,4 +12,4 @@ You will also see any lint errors in the console.
 
 ### npm run deploy:local
 
-Builds a static copy of your site to the `build/` folder and deploys it locally at http://localhost:5000.
+Builds a static copy of your site to the `build` folder and deploys it locally at http://localhost:5000.
